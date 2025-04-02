@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <title>Invincible Lara</title>
     <style>
-           body { 
+        body { 
     font-family: Arial, sans-serif; 
     margin: 20px; 
     max-width: 800px; 
@@ -17,6 +17,7 @@
     margin-right: auto; 
     background-color: #e1d8c7; /* Soft warm beige */
     color: #292929; /* Dark gray for readability */
+    padding: 15px; /* Added padding to prevent text from sticking to edges */
 }
 
 h1 { 
@@ -27,6 +28,7 @@ h1 {
 .story p { 
     text-indent: 20px; 
     line-height: 1.8; 
+    margin-bottom: 15px; /* Added spacing between paragraphs */
 }
 
 .comments, .rating { 
@@ -44,6 +46,13 @@ textarea, button {
 button:hover { 
     background-color: #C6B8AE; /* Slightly darker beige */
 }
+
+/* Responsive Fix for Small Screens */
+@media screen and (max-width: 600px) {
+    body { padding: 20px; } /* Extra space around text on small screens */
+    .story { font-size: 18px; } /* Slightly larger font for better readability */
+}
+
     </style>
 </head>
 <body>
