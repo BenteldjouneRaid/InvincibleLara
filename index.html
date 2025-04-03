@@ -80,11 +80,11 @@ button:hover {
         <p>The next morning, she stepped outside to find her garden empty. Every bloom had withered beneath the merciless grasp of winter, leaving behind only a heavy silence that weighed on her like a grave unmarked. In that moment, she understood a cruel truth: love, when left unspoken, does not fade—it festers. It claws. It whispers through the years like a ghost lurking in every shadow, a wound that never heals. It had shaped her life as surely as the flowers once shaped her garden, but now, it's a wasteland, mirroring the ruin inside her.</p>
         <p>In her final moment of despair, she clutched the last remaining flower and, with a voice trembling under the weight of a lifetime of regret, she asked herself, “If time were to turn back, would I dare to tell him? Would I have the courage to break this silence? Would I dare? Or would I remain shackled in longing?” Tears fell, unstoppable—a flood of agony drowning her. But once they left her cheeks, they were gone—stolen, like everything else, by the brutality of wind and time.</p>
         <p>As soon as the rain stopped, her eyes were exhausted, hollowed out—unable to shed another tear, not even able to produce one. Then, suddenly, a solemn glow flickered from the lone rose in her hand that had been watered and soaked in the holy waters of her sorrow. A strange light expanded, swallowing the remnants of agony from within her fragile frame. And for a fleeting moment, she felt herself surrendering to something greater, a force that transcended her pain.</p>
+        <p>Her body trembled, frail under the weight of decades, and she collapsed to her knees—all her senses were gone. By the time Lara opened her eyes, she felt a strange, hazy relief—a peace that seemed like a lie, a cruel trick. She stood, her tiny body trembling, and in that pivotal moment, she felt herself surrendering to something greater, a force that transcended her pain.</p>
         <p>Her body trembled, frail under the weight of decades, and she collapsed to her knees—all her senses were gone. By the time Lara opened her eyes, she felt a strange, hazy relief—a peace that seemed like a lie, a cruel trick. She stood, her tiny body trembling, and in that pivotal moment, she realized she was young again. Words could not capture the storm of emotions surging within her. Everything was a blur—joy entangled with dread, as though she stood on the threshold of both paradise and despair. Her mind was a void, her memories erased, but her heart still carried a hollow ache she could not name.</p>
         <p>It seemed that our young, lovely Lara had forgotten. Forgotten what she went through, her endless suffering, but it’s natural, I suppose. All dreams fade into oblivion once you awaken. Or perhaps that wasn’t a dream—most likely a nightmare, rather. Or could it be the powerful, unbearable desire to see someone once again had miraculously found its way into reality? Probably it was the ultimate grief—the burying of feelings that never saw the light—had been so powerful, so overwhelming, that it reached the very edge of time itself. So powerful that it looped back, bending her soul to a youth she hadn’t asked for.</p>
-        <p>Whatever the reason, the questions burned like embers in the dark: Would Lara be capable of escaping the brutal future? Would she be able to change her fate and attain the ending she once craved, or would she choke on silence once again? Would her dreams finally break into reality, or would they rot once more in her chest? And the greatest question—by the time Lara remembers what she had seen, or it may be what she had lived through... Would she find happiness? Would destiny finally smile at her rather than smirk? Or would she still be stuck in the endless loop of tragedy, sipping it all over again—a scar deeper than the first? </p>
-        <p>A timeless wound that no time could heal. A love she’d carry to her grave—spoken or not.</p>
-        <p> Perhaps our young, beautiful lady would forever remain imprisoned in longing, staring into the abyss of regret…</p>
+        <p>Whatever the reason, the questions burned like embers in the dark: Would Lara be capable of escaping the brutal future? Would she be able to change her fate and attain the ending she once craved, or would she choke on silence once again? Would her dreams finally break into reality, or would they rot once more in her chest? And the greatest question—by the time Lara remembers what she had seen, or it may be what she had lived through... Would she find happiness? Would destiny finally smile at her rather than smirk? Or would she still be stuck in the endless loop of tragedy, sipping it all over again—a scar deeper than the first? A timeless wound that no time could heal. A love she’d carry to her grave—spoken or not.</p>
+        <p>Perhaps our young, beautiful lady would forever remain imprisoned in longing, staring into the abyss of regret…</p>
     </div>
     <img src="https://raw.githubusercontent.com/BenteldjouneRAID/InvincibleLara/main/lara-garden.jpg" alt="An elderly woman in a garden holding a lone rose" class="story-image">
 
@@ -98,22 +98,24 @@ button:hover {
     </div>
 
     <div class="comments">
-        <h3>Leave Your Feedback</h3>
-        <textarea id="comment" placeholder="Write your thoughts here..."></textarea><br>
-        <button onclick="submitComment()">Submit Comment</button>
-        <div class="comment-list" id="commentList"></div>
+        <h3>Leave Your Feedback—What Did You Think of Lara’s Story?</h3>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            var disqus_config = function () {
+            this.page.url = 'https://benteldjouneraid.github.io/InvincibleLara/';  // Replace with your page's canonical URL
+            this.page.identifier = 'invincible_lara'; // Replace with a unique identifier for this page
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://invinciblelara.disqus.com/embed.js'; // Updated with your Disqus shortname
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-
-    <script>
-        function submitComment() {
-            const commentText = document.getElementById("comment").value;
-            if (commentText.trim() === "") return;
-            const rating = document.querySelector('input[name="rating"]:checked')?.value || "Not rated";
-            const commentDiv = document.createElement("div");
-            commentDiv.innerHTML = `<p><strong>Rating:</strong> ${rating} stars</p><p>${commentText}</p><hr>`;
-            document.getElementById("commentList").appendChild(commentDiv);
-            document.getElementById("comment").value = ""; // Clear the textarea
-        }
-    </script>
 </body>
 </html>
